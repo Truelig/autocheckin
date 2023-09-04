@@ -8,7 +8,7 @@ pushplush_token = envs['pushplush_token']
 body = {
     "token": pushplush_token,
     "title": "掘金签到通知",
-    "content": '测试数据666',
+    "content": '测试数据999',
     "template": "txt"
 }
 requests.post('http://www.pushplus.plus/send', data=json.dumps(body))
