@@ -13,7 +13,6 @@ headers = {
     "Cookie": juejin_cookie
 }
 data = "签到失败"
-
 response = requests.post(url, headers=headers)
 responseJson = response.json()
 if ('success' == responseJson['err_msg']):
@@ -22,8 +21,8 @@ else:
     data = responseJson['err_msg']
 body = {
     "token": pushplush_token,
-    "title": "掘金签到通知",
-    "content": '测试数据999',
+    "title": "掘金签到通知g",
+    "content": data,
     "template": "txt"
 }
 requests.post('http://www.pushplus.plus/send', data=json.dumps(body))
