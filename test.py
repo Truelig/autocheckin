@@ -1,10 +1,10 @@
 import json
-
+import os
 import requests
 
 print(666)
-
-pushplush_token = '7b9d76c0804a43fb95d269a0281c42e0'
+envs = dict(os.environ)
+pushplush_token = envs['pushplush_token']
 body = {
     "token": pushplush_token,
     "title": "掘金签到通知",
