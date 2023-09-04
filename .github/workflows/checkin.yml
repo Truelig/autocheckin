@@ -40,6 +40,7 @@ jobs:
     - name: print666
       env:
         pushplush_token: ${{ secrets.PUSHPLUSH_TOKEN }}
+        juejin_cookie: ${{ secrets.JUEJIN_COOKIE }}
       run: |
         python ./test.py
 
