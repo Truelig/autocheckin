@@ -16,7 +16,7 @@ data = "签到失败"
 response = requests.post(url, headers=headers)
 responseJson = response.json()
 if ('success' == responseJson['err_msg']):
-    data = "总积分" + responseJson['sum_point'] + "," + "增长" + responseJson['incr_point']
+    data = "总积分" + str(responseJson['sum_point']) + "," + "增长" + str(responseJson['incr_point'])
 else:
     data = responseJson['err_msg']
 body = {
